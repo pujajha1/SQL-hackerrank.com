@@ -1,0 +1,6 @@
+#https://www.hackerrank.com/challenges/weather-observation-station-16?h_r%5B%5D=next-challenge&h_r%5B%5D=next-challenge&h_r%5B%5D=next-challenge&h_r%5B%5D=next-challenge&h_r%5B%5D=next-challenge&h_r%5B%5D=next-challenge&h_r%5B%5D=next-challenge&h_r%5B%5D=next-challenge&h_r%5B%5D%5B%5D=next-challenge&h_r%5B%5D%5B%5D=next-challenge&h_v%5B%5D=zen&h_v%5B%5D=zen&h_v%5B%5D=zen&h_v%5B%5D=zen&h_v%5B%5D=zen&h_v%5B%5D=zen&h_v%5B%5D=zen&h_v%5B%5D=zen&h_v%5B%5D%5B%5D=zen&h_v%5B%5D%5B%5D=zen&h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen
+select round(LONG_W,4)
+from station
+where ROUND(LAT_N,4)=(select ROUND(max(LAT_N),4)
+from station
+where LAT_N<137.2345);
