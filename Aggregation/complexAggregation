@@ -1,0 +1,4 @@
+#https://www.hackerrank.com/challenges/weather-observation-station-19/problem
+select round(sqrt(((max(LAT_N)-min(LAT_N)) * (max(LAT_N)-min(LAT_N)))+
+((max(LONG_W)-MIN(LONG_W)) *(max(LONG_W)-MIN(LONG_W)))),4)
+from station;
