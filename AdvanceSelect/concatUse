@@ -1,0 +1,10 @@
+#https://www.hackerrank.com/challenges/the-pads/problem
+
+select CONCAT(NAME,concat(concat('(',SUBSTR(occupation,1,1)),')')) 
+from occupations
+ORDER BY NAME;
+
+SELECT concat(concat(CONCAT('There are a total of ',count(occupation)),' ' ),concat(lower(occupation),'s.')) 
+FROM OCCUPATIONS
+group by occupation
+order by count(occupation) , occupation ;
