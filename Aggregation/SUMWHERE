@@ -1,0 +1,5 @@
+#https://www.hackerrank.com/challenges/weather-observation-station-13/problem?h_r%5B%5D=next-challenge&h_r%5B%5D=next-challenge&h_v%5B%5D=zen&h_v%5B%5D=zen&h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen
+select SUM(LAT_N)
+from station
+where LAT_N>38.7880
+AND LAT_N<137.2345;
