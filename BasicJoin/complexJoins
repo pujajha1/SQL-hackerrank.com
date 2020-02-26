@@ -1,0 +1,14 @@
+#https://www.hackerrank.com/challenges/full-score/problem
+select hacker_id,name from
+(select s.hacker_id,h.name,count(*) as cnt
+from difficulty d
+join challenges c 
+on (d.difficulty_level=c.difficulty_level)
+join submissions s
+on (c.challenge_id=s.challenge_id)
+join hackers h
+on (s.hacker_id=h.hacker_id)
+where s.score=d.score
+group by s.hacker_id,h.name
+having count(*)>1)
+order by cnt desc,hacker_id;
