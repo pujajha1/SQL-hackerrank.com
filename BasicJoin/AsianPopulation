@@ -1,0 +1,5 @@
+#https://www.hackerrank.com/challenges/asian-population/problem
+select SUM(c.POPULATION)
+from city c JOIN country cn
+on (c.countrycode=cn.code)
+where cn.continent='Asia';
