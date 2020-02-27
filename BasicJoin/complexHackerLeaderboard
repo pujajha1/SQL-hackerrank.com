@@ -1,0 +1,10 @@
+#https://www.hackerrank.com/challenges/contest-leaderboard/problem
+select wp.hacker_id,name,sum(score) from 
+(select max(score) as score,hacker_id
+from submissions
+ where score !=0
+group by challenge_id,hacker_id)wp
+join hackers h
+ON (h.hacker_id=wp.hacker_id)
+ group by wp.hacker_id,name
+ order by sum(score) desc,hacker_id;
